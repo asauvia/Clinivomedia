@@ -1,0 +1,993 @@
+<title>Clinivo Media | Websites, Instagram and Google for Doctors in India</title>
+<meta name="description" content="Built by doctors, for doctors. Clinivo Media builds and runs websites, Instagram and Google profiles for doctors, clinics and hospitals across India.">
+<link rel="canonical" href="https://clinivomedia.asauvia.com/">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#081638">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Clinivo Media">
+<meta property="og:title" content="Clinivo Media · Built by doctors, for doctors">
+<meta property="og:description" content="Websites, Instagram and Google profiles for doctors, clinics and hospitals.">
+<meta property="og:url" content="https://clinivomedia.asauvia.com/">
+<meta property="og:image" content="https://clinivomedia.asauvia.com/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Clinivo Media logo with the line: Built by doctors. For doctors.">
+<meta property="og:locale" content="en_IN">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Clinivo Media · Built by doctors, for doctors">
+<meta name="twitter:description" content="Websites, Instagram and Google profiles for doctors, clinics and hospitals.">
+<meta name="twitter:image" content="https://clinivomedia.asauvia.com/assets/og-image.jpg">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="assets/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&display=swap"></noscript>
+<link rel="stylesheet" href="assets/base.css">
+<script src="assets/consent.js" defer></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Clinivo Media","url":"https://clinivomedia.asauvia.com/","logo":"https://clinivomedia.asauvia.com/assets/icon-512.png","image":"https://clinivomedia.asauvia.com/assets/og-image.jpg","description":"Built by doctors, for doctors. Websites, Instagram and Google profiles for doctors, clinics and hospitals.","email":"clinivomedia@gmail.com","telephone":"+91-70523-01258","areaServed":"IN","sameAs":["https://www.instagram.com/clinivomedia/"]}</script>
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"},"integrity":{"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js":"sha384-61S/Nu32S3E5+n+KpCOTb2eRYps6fVKm+9Gz1QBvSePFthb46f063Aa/qe/lykFZ","https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/environments/RoomEnvironment.js":"sha384-ZGqh+dJjt6z9NHsWYYt+TPDFj8y+2If7naI6a6AkkyNZyH51CVS3HTWFh0njp4k6"}}</script>
+<style>
+/* Layout: a navy clinic at night with lit cool-white rooms. A 3D Clinivo cross is the doorway; the visitor flies through it into the practice. Shared tokens live in assets/base.css. */
+canvas.led{display:block;width:100%}
+section{scroll-margin-top:var(--head,101px)}
+
+/* ===== Hero: 3D doorway ===== */
+.hero{position:relative;height:calc(100svh - var(--head,101px));min-height:560px;overflow:hidden;background:var(--board)}
+#gl{position:absolute;inset:0;width:100%;height:100%;display:block}
+.hero-fallback{position:absolute;right:9%;top:50%;width:min(31vw,410px);transform:translateY(-52%);transition:opacity .8s var(--ease-out)}
+.gl-ready .hero-fallback{opacity:0;pointer-events:none}
+#gl{opacity:0;transition:opacity .9s var(--ease-out)}
+.gl-ready #gl{opacity:1}
+.hero-vignette{position:absolute;inset:0;z-index:1;pointer-events:none;background:radial-gradient(120% 90% at 15% 100%,rgba(8,22,56,.94) 0%,rgba(8,22,56,.6) 38%,rgba(8,22,56,0) 64%)}
+.hero-copy{position:absolute;left:0;right:0;bottom:clamp(2rem,7vh,5rem);z-index:2;pointer-events:none;transform-origin:left bottom}
+.hero-copy .wrap>*{pointer-events:auto}
+.hero h1{font-size:var(--step-hero);max-width:9.5ch}
+.hero h1 .line{display:block;overflow:hidden;padding-bottom:.07em}
+.hero h1 .line>span{display:inline-block;animation:rise 1.2s var(--ease-out) both}
+.hero h1 .line:nth-child(2)>span{animation-delay:.12s}
+.hero h1 em{font-style:normal;color:var(--teal)}
+@keyframes rise{from{transform:translateY(.6em) rotate(2deg);opacity:.2}to{transform:none;opacity:1}}
+.hero .lede{margin-top:1.4rem;font-size:clamp(1.05rem,1rem + .35vw,1.3rem);max-width:44ch;color:#C5D1EA}
+.hero-actions{display:flex;gap:1.6rem;align-items:center;flex-wrap:wrap;margin-top:1.8rem}
+.scroll-cue{position:absolute;right:var(--gutter);bottom:clamp(2rem,7vh,5rem);z-index:2;display:flex;align-items:center;gap:.8rem;font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:var(--on-board-2);font-weight:600}
+.scroll-cue i{width:1px;height:56px;background:var(--board-line);position:relative;overflow:hidden}
+.scroll-cue i::after{content:"";position:absolute;left:0;top:-30%;width:1px;height:30%;background:var(--teal);animation:drip 1.8s var(--ease-out) infinite}
+@keyframes drip{to{top:100%}}
+@media (max-width:760px){
+  .scroll-cue{display:none}
+  .hero-vignette{background:linear-gradient(to top,rgba(8,22,56,.97) 0%,rgba(8,22,56,.75) 48%,rgba(8,22,56,0) 72%)}
+  .hero-fallback{right:50%;top:26%;transform:translate(50%,-50%);width:min(56vw,240px)}
+}
+
+/* ===== Doctors manifesto ===== */
+.wall{background:var(--wall);color:var(--ink)}
+.wall ::selection{background:var(--ink);color:var(--wall)}
+.wall .lede{color:var(--ink-2)}
+.doctors{padding-block:clamp(4rem,9vw,7rem) var(--section);overflow:hidden}
+.marquee{white-space:nowrap;font-family:var(--display);font-stretch:125%;font-weight:900;font-size:clamp(3.2rem,11vw,10rem);line-height:.95;letter-spacing:-.04em;display:flex;flex-direction:column;gap:.1em;user-select:none}
+.mq{display:flex;align-items:center;gap:.35em;will-change:transform}
+.mq svg{width:.62em;height:.62em;flex:none}
+.mq-b{color:transparent;-webkit-text-stroke:2px var(--teal-ink);transform:translateX(-22%)}
+.manifesto{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.35fr);gap:clamp(2rem,6vw,6rem);margin-top:clamp(3rem,7vw,6rem);align-items:start}
+.manifesto h2{font-size:var(--step-1);max-width:10ch}
+.reveal{font-size:clamp(1.3rem,2.2vw,1.9rem);line-height:1.38;font-weight:500;letter-spacing:-.01em;color:var(--ink);max-width:34ch}
+.facts{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:2rem;padding:0;list-style:none}
+.facts li{border:1px solid var(--wall-line);border-radius:999px;padding:.45rem .9rem;font-size:.92rem;font-weight:600;color:var(--ink);background:#fff}
+
+/* ===== Journey: phone ===== */
+.journey{background:var(--wall);color:var(--ink);padding-block:clamp(2rem,5vw,4rem) var(--section)}
+.journey ::selection{background:var(--ink);color:var(--wall)}
+.journey-inner{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(2rem,6vw,6rem);align-items:center;min-height:min(760px,calc(100svh - var(--head,101px) - 40px))}
+.journey h2{font-size:var(--step-1);max-width:12ch}
+.steps{list-style:none;margin:2.4rem 0 0;padding:0;display:grid;gap:.4rem;border-left:2px solid var(--wall-line)}
+.step{padding:.9rem 0 .9rem 1.4rem;margin-left:-2px;border-left:2px solid transparent;transition:border-color .4s}
+.step.on{border-left-color:var(--teal-ink)}
+.step button{appearance:none;border:0;background:none;padding:0;color:var(--ink-2);font:inherit;cursor:pointer;text-align:left;transition:color .3s}
+.step.on button{color:var(--ink)}
+.step b{display:flex;gap:.8rem;align-items:baseline;font-family:var(--display);font-stretch:118%;font-weight:800;font-size:1.35rem;letter-spacing:-.02em}
+.step b small{font-size:.8rem;color:var(--teal-ink);font-stretch:100%;font-variant-numeric:tabular-nums}
+.step p{color:var(--ink-2);margin-top:.3rem;max-width:40ch}
+.step-caption,.swipe-hint{display:none}
+.stage3d{perspective:1400px;display:grid;place-items:center;position:relative;padding-bottom:2.4rem}
+.stage3d::before{content:"";position:absolute;width:80%;aspect-ratio:1;border-radius:50%;background:radial-gradient(closest-side,rgba(31,181,196,.22),rgba(31,181,196,0))}
+.phone{position:relative;z-index:1;width:min(320px,calc((100svh - var(--head,101px) - 140px) * 9 / 19));max-width:100%;margin-top:2.8rem;aspect-ratio:9/19;border-radius:46px;background:#0A0F1E;padding:11px;transform:rotateY(-7deg) rotateX(3deg);box-shadow:0 60px 80px -40px rgba(11,27,77,.5),0 20px 30px -20px rgba(11,27,77,.35),inset 0 0 0 1.5px #2a3550;will-change:transform}
+.phone-label{position:absolute;z-index:2;top:0;left:50%;translate:-50% 0;white-space:nowrap;background:var(--ink);color:var(--wall);border-radius:999px;padding:.5rem 1rem;font-size:.88rem;font-weight:700;box-shadow:0 12px 24px -12px rgba(11,27,77,.5)}
+.phone-label.bump{animation:bump .5s var(--ease-out)}
+@keyframes bump{from{transform:translateY(6px) scale(.94);opacity:.5}to{transform:none;opacity:1}}
+.phone .notch{position:absolute;top:18px;left:50%;width:84px;height:22px;margin-left:-42px;background:#0A0F1E;border-radius:20px;z-index:5}
+.screens{position:relative;width:100%;height:100%;border-radius:34px;overflow:hidden;background:#fff}
+.scr{position:absolute;inset:0;padding:46px 14px 14px;font-size:12.5px;line-height:1.38;color:#1d2433;font-family:var(--text);clip-path:inset(100% 0 0 0);transition:clip-path .55s var(--ease-out)}
+.scr.on{clip-path:inset(0 0 0 0)}
+.scr.past{clip-path:inset(0 0 100% 0)}
+.screens.driven .scr{transition:none;clip-path:none}
+.screens.driven .bub{transition:none}
+.example-tag{position:absolute;bottom:0;left:50%;transform:translateX(-50%);font-size:.78rem;color:var(--ink-2);white-space:nowrap}
+.g-bar{display:flex;align-items:center;gap:8px;border:1px solid #dfe3ea;border-radius:999px;padding:9px 12px;font-size:12.5px;box-shadow:0 2px 6px rgba(0,0,0,.06)}
+.g-bar svg{width:14px;height:14px}
+.g-tabs{display:flex;gap:12px;margin:10px 4px;font-size:11px;color:#5f6470}
+.g-tabs span:first-child{color:#1a5fd0;border-bottom:2px solid #1a5fd0;padding-bottom:3px}
+.g-map{height:150px;border-radius:12px;overflow:hidden;background:#e8eef2}
+.g-map svg{width:100%;height:100%;display:block}
+.g-card{margin-top:10px;border:1px solid #e3e7ee;border-radius:12px;padding:10px 11px;display:grid;gap:3px}
+.g-card b{font-size:13.5px;color:#1a0dab;font-weight:600}
+.g-card .stars{color:#B87700;letter-spacing:1px}
+.g-card .muted{color:#5f6470}
+.g-card .open{color:#137333}
+.g-btns{display:flex;gap:6px;margin-top:7px}
+.g-btns span{flex:1;text-align:center;border:1px solid #d5dbe5;border-radius:999px;padding:5px 0;color:#1a5fd0;font-weight:600;font-size:11px}
+.g-btns span.hl{background:#1a5fd0;color:#fff;border-color:#1a5fd0}
+.scr-site{background:#F6FAFA;padding-inline:0}
+.s-nav{display:flex;justify-content:space-between;align-items:center;padding:0 14px 10px;font-weight:700;font-size:11px;color:#0B1B4D}
+.s-nav i{width:16px;height:2px;background:#0B1B4D;box-shadow:0 5px 0 #0B1B4D}
+.s-hero{margin:0 10px;border-radius:14px;background:#0E2257;color:#fff;padding:16px 14px;display:grid;gap:8px}
+.s-hero b{font-family:var(--display);font-stretch:118%;font-size:20px;line-height:1.02;letter-spacing:-.02em;font-weight:850}
+.s-hero p{font-size:11px;color:#C5D1EA}
+.s-hero .wa{justify-self:start;background:#25D366;color:#06301a;border-radius:999px;padding:7px 12px;font-weight:700;font-size:11px}
+.s-chips{display:flex;flex-wrap:wrap;gap:5px;padding:12px 10px 8px}
+.s-chips span{border:1px solid #cfdde0;border-radius:999px;padding:4px 9px;font-size:11px;background:#fff;color:#0B1B4D}
+.s-ig{padding:0 10px}
+.s-ig small{display:block;font-weight:700;font-size:10.5px;margin:4px 0 6px;color:#0B1B4D}
+.s-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:4px}
+.s-grid span{aspect-ratio:1;border-radius:6px;display:grid;place-items:center;text-align:center;font-weight:800;font-size:9px;line-height:1.1;padding:4px;font-family:var(--display);font-stretch:112%}
+.s-grid span:nth-child(3n+1){background:#0E2257;color:#fff}.s-grid span:nth-child(3n+2){background:#1FB5C4;color:#062a30}.s-grid span:nth-child(3n){background:#E1EAEC;color:#0B1B4D}
+.scr-wa{background:#EFE7DD;padding:0}
+.w-head{background:#075E54;color:#fff;padding:44px 12px 10px;display:flex;align-items:center;gap:9px}
+.w-head i{width:28px;height:28px;border-radius:50%;background:#1FB5C4;display:grid;place-items:center;font-style:normal;font-weight:800;color:#06303a;font-size:11px}
+.w-head b{font-size:12.5px;display:block}.w-head small{font-size:10px;opacity:.85}
+.w-body{padding:12px 10px;display:grid;gap:7px}
+.bub{max-width:82%;padding:7px 9px 5px;border-radius:9px;font-size:11.5px;box-shadow:0 1px 1px rgba(0,0,0,.08);background:#fff;justify-self:start;transition:opacity .4s,transform .5s var(--ease-out)}
+.bub.me{background:#D9FDD3;justify-self:end}
+.bub time{display:block;text-align:right;font-size:10px;color:#56655d;margin-top:2px}
+.bub.sys{justify-self:center;background:#FFF3C4;font-size:10.5px;text-align:center;font-weight:600}
+.js .scr-wa:not(.on) .bub{opacity:0;transform:translateY(8px)}
+.scr.on .bub:nth-child(2){transition-delay:.3s}.scr.on .bub:nth-child(3){transition-delay:.6s}.scr.on .bub:nth-child(4){transition-delay:.9s}
+
+/* ===== Health check ===== */
+.checkup{padding-block:var(--section)}
+.sec-head{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(1.2rem,4vw,4rem);align-items:end;margin-bottom:clamp(2.5rem,5vw,4rem)}
+.sec-head h2{font-size:var(--step-1);max-width:14ch}
+.check-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:clamp(1.5rem,4vw,3.5rem);align-items:start}
+.qs{list-style:none;margin:0;padding:0;border-top:1px solid var(--board-line)}
+.qrow{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:1rem 1.6rem;align-items:center;padding-block:1.25rem;border-bottom:1px solid var(--board-line)}
+.qrow b{font-family:var(--display);font-stretch:112%;font-weight:750;font-size:1.12rem;letter-spacing:-.01em}
+.qrow p{color:var(--on-board-2);font-size:.95rem;margin-top:.2rem;max-width:46ch}
+.seg{display:inline-flex;background:var(--board-deep);border:1px solid var(--board-line);border-radius:999px;padding:3px;justify-self:start}
+.seg button{appearance:none;border:0;background:none;color:var(--on-board-2);font:inherit;font-size:.9rem;font-weight:650;padding:.5rem .95rem;border-radius:999px;cursor:pointer;transition:background .25s,color .25s,transform .4s var(--ease-out)}
+.seg button:hover{color:var(--on-board)}
+.seg button:active{transform:scale(.94)}
+.seg button[aria-pressed="true"][data-v="1"]{background:var(--teal);color:var(--board)}
+.seg button[aria-pressed="true"][data-v="0"]{background:var(--amber);color:#2a1a00}
+.report{position:sticky;top:calc(var(--head,101px) + 16px);background:var(--board-2);border:1px solid var(--board-line);border-radius:16px;overflow:hidden;box-shadow:0 30px 60px -30px rgba(0,0,0,.7)}
+.r-head{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1rem 1.2rem;border-bottom:1px solid var(--board-line);font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:var(--on-board-2)}
+.monitor{background:var(--board-deep);padding:1rem 1.2rem 1.1rem;display:grid;grid-template-columns:auto minmax(0,1fr);gap:1.2rem;align-items:center}
+.score{font-family:var(--display);font-stretch:125%;font-weight:850;font-size:3.4rem;line-height:.9;letter-spacing:-.04em;font-variant-numeric:tabular-nums;color:var(--on-board-2);transition:color .4s}
+.score small{font-size:1.1rem;letter-spacing:0;margin-left:.15em;color:var(--on-board-2)}
+.score-label{font-size:.82rem;color:var(--on-board-2);margin-top:.5rem;max-width:15ch;line-height:1.3}
+#ecg{width:100%;height:84px;display:block}
+.vlist{list-style:none;margin:0;padding:.4rem 1.2rem;display:grid}
+.vlist li{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding-block:.55rem;border-bottom:1px dashed var(--board-line);font-size:.95rem}
+.vlist li:last-child{border-bottom:0}
+.vlist .st{font-size:.8rem;font-weight:700;border-radius:999px;padding:.2rem .6rem;color:var(--on-board-2);background:rgba(169,184,217,.12);white-space:nowrap}
+.vlist .st.ok{color:var(--board);background:var(--teal)}
+.vlist .st.bad{color:#2a1a00;background:var(--amber)}
+.rx{margin:.4rem 1.2rem 0;padding:1rem 1.1rem;border-radius:12px;background:var(--wall);color:var(--ink);display:grid;grid-template-columns:auto minmax(0,1fr);gap:.9rem;align-items:start}
+.rx .sym{font-family:Georgia,"Times New Roman",serif;font-weight:700;font-size:2rem;line-height:1;color:var(--teal-ink)}
+.rx b{font-family:var(--display);font-stretch:118%;font-weight:850;font-size:1.3rem;letter-spacing:-.02em;display:block}
+.rx p{color:var(--ink-2);font-size:.93rem;margin-top:.25rem}
+.r-send{padding:1rem 1.2rem 1.3rem;display:grid;gap:.75rem}
+.r-foot{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;font-size:.88rem;color:var(--on-board-2)}
+.r-foot a,.r-foot button{background:none;border:0;color:var(--on-board);font:inherit;text-decoration:underline;text-decoration-color:var(--teal);text-underline-offset:.25em;cursor:pointer;padding:0}
+
+/* ===== Plans ===== */
+.plans{background:var(--wall);color:var(--ink);padding-block:var(--section);overflow:hidden}
+.plans .lede{color:var(--ink-2)}
+.plans ::selection{background:var(--ink);color:var(--wall)}
+.plans-track{display:flex;gap:clamp(1rem,2vw,1.6rem);will-change:transform}
+.plan{flex:0 0 min(540px,82vw);background:#fff;border:1px solid var(--wall-line);border-radius:20px;padding:clamp(1.4rem,3vw,2.4rem);display:flex;flex-direction:column;gap:1.1rem;transition:transform .5s var(--ease-out),box-shadow .5s;box-shadow:0 30px 50px -40px rgba(11,27,77,.35)}
+.plan:hover{box-shadow:0 40px 60px -36px rgba(11,27,77,.45)}
+.plan .glyph{width:60px;height:60px}
+.plan h3{font-size:clamp(2.1rem,4vw,3.2rem)}
+.plan .for{color:var(--ink-2);font-size:1.05rem;max-width:34ch}
+.plan ul{list-style:none;margin:0;padding:1.2rem 0 0;border-top:1px solid var(--wall-line);display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.55rem 1.4rem;font-size:.97rem;flex:1;align-content:start}
+.plan ul li{padding-left:1.05rem;position:relative}
+.plan ul li::before{content:"";position:absolute;left:0;top:.62em;width:6px;height:6px;border-radius:50%;background:var(--teal-ink)}
+.plan .ask{align-self:flex-start;font-weight:700}
+.plan.deep{background:var(--board);color:var(--on-board);border-color:var(--board)}
+.plan.deep .for{color:var(--on-board-2)}
+.plan.deep ul{border-color:var(--board-line)}
+.plan.deep ul li::before{background:var(--teal)}
+.plans-progress{height:2px;background:var(--wall-line);margin-top:2rem;border-radius:2px;overflow:hidden}
+.plans-progress i{display:block;height:100%;background:var(--ink);transform-origin:left;transform:scaleX(var(--pp,1))}
+
+/* ===== Process ===== */
+.process{padding-block:var(--section)}
+.proc{position:relative;list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:1.2rem;--p:1}
+.proc::before,.proc-fill{content:"";position:absolute;left:0;right:0;top:11px;height:2px;background:var(--board-line)}
+.proc-fill{background:var(--teal);transform-origin:left;transform:scaleX(1);z-index:1}
+.pnode{position:relative;padding-top:2.6rem}
+.pnode::before{content:"";position:absolute;z-index:2;top:2px;left:0;width:20px;height:20px;border-radius:50%;background:var(--board);border:2px solid var(--board-line);transition:border-color .3s,background .3s,box-shadow .3s}
+.pnode.on::before{border-color:var(--teal);background:var(--teal);box-shadow:0 0 0 6px rgba(31,181,196,.15)}
+.pnode small{font-size:.8rem;color:var(--on-board-2);font-variant-numeric:tabular-nums;font-weight:600}
+.pnode h3{font-size:1.3rem;letter-spacing:-.015em;margin-top:.35rem}
+.pnode p{color:var(--on-board-2);font-size:.95rem;margin-top:.4rem}
+
+/* ===== Who + promise ===== */
+.who{padding-block:var(--section)}
+.split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(2.5rem,6vw,6rem)}
+.split h2{font-size:clamp(1.7rem,3vw,2.5rem);margin-bottom:1.8rem}
+.floors{list-style:none;margin:0;padding:0;border-top:2px solid var(--ink)}
+.floors li{display:grid;grid-template-columns:auto minmax(0,1fr);gap:1.2rem;padding-block:1.2rem;border-bottom:1px solid var(--wall-line);align-items:baseline}
+.floors b{font-family:var(--display);font-stretch:125%;font-weight:800;font-size:1.35rem;letter-spacing:-.02em;min-width:7.5ch}
+.floors span{color:var(--ink-2)}
+.promise{list-style:none;margin:0;padding:0;display:grid;gap:1.4rem}
+.promise li{display:grid;gap:.25rem}
+.promise b{font-size:1.12rem}
+.promise span{color:var(--ink-2)}
+.ethics{margin-top:2.2rem;padding:1.1rem 1.2rem;background:var(--wall-2);border-radius:10px;font-size:.95rem}
+
+/* ===== Book: the one call to action ===== */
+.book{padding-block:var(--section);overflow:hidden}
+.book-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:clamp(2rem,5vw,5rem);align-items:start}
+.book h2{font-size:clamp(2.1rem,4.2vw,3.7rem);max-width:13ch;transform-origin:left center}
+.book .lede{margin-top:1.4rem;max-width:42ch}
+.contact{display:grid;gap:1rem;margin-top:2.4rem}
+.contact div{display:grid;gap:.15rem;border-top:1px solid var(--board-line);padding-top:.85rem}
+.contact small{color:var(--on-board-2);font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600}
+.contact a,.contact span{font-size:1.1rem;font-weight:600;text-decoration:none;font-variant-numeric:tabular-nums;user-select:all}
+.contact a:hover{color:var(--teal)}
+.form-card{color-scheme:light;background:var(--wall);color:var(--ink);border-radius:20px;padding:clamp(1.3rem,3vw,2.2rem);box-shadow:0 40px 80px -40px rgba(0,0,0,.6)}
+.form-card ::selection{background:var(--ink);color:var(--wall)}
+.form-card h3{font-size:clamp(1.5rem,2.6vw,2rem);letter-spacing:-.02em}
+.form-card .sub{color:var(--ink-2);margin-top:.4rem;font-size:.97rem}
+.fgrid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:.95rem 1rem;margin-top:1.4rem}
+.f{display:grid;gap:.35rem;align-content:start}
+.f.full{grid-column:1/-1}
+.f label{font-size:.85rem;font-weight:650;color:var(--ink)}
+.f label small{font-weight:500;color:var(--ink-2)}
+.f input,.f select,.f textarea{font:inherit;font-size:1rem;color:var(--ink);background:#fff;border:1.5px solid var(--wall-line);border-radius:10px;padding:.72rem .85rem;width:100%;transition:border-color .2s,box-shadow .2s;color-scheme:light}
+.f textarea{min-height:6.5rem;resize:vertical}
+.f input::placeholder,.f textarea::placeholder{color:#66758F}
+.f input:hover,.f select:hover,.f textarea:hover{border-color:#9FB2BA}
+.f input:focus,.f select:focus,.f textarea:focus{outline:none;border-color:var(--teal-ink);box-shadow:0 0 0 3px rgba(10,110,122,.18)}
+.f [aria-invalid="true"]{border-color:var(--danger-ink);background:#FFF8F7}
+.f .err{font-size:.84rem;color:var(--danger-ink);font-weight:600;min-height:0}
+.f .count{font-size:.8rem;color:var(--ink-2);justify-self:end}
+.consent{grid-column:1/-1;display:grid;grid-template-columns:auto minmax(0,1fr);gap:.7rem;align-items:start;font-size:.92rem;color:var(--ink-2)}
+.consent input{width:20px;height:20px;margin:.15rem 0 0;accent-color:var(--ink)}
+.consent a{color:var(--ink);font-weight:650;text-decoration-color:var(--teal-ink);text-underline-offset:.2em}
+.hp{position:absolute!important;left:-10000px!important;width:1px;height:1px;overflow:hidden}
+.form-actions{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:1rem 1.4rem;align-items:center;margin-top:.4rem}
+.form-actions .btn{background:var(--ink);color:var(--wall);box-shadow:0 14px 30px -14px rgba(11,27,77,.55)}
+.form-actions .btn:hover{background:#162C6E}
+.form-actions small{color:var(--ink-2);font-size:.85rem}
+.form-status{grid-column:1/-1;border-radius:12px;padding:.9rem 1rem;font-size:.95rem}
+.form-status.bad{background:#FFF1EF;color:var(--danger-ink);font-weight:600}
+.done{display:grid;gap:.9rem;justify-items:start}
+.done .tick{width:54px;height:54px;border-radius:50%;background:var(--teal);display:grid;place-items:center}
+.done .tick svg{width:26px;height:26px}
+.done p{color:var(--ink-2)}
+.done a{color:var(--ink);font-weight:650;text-decoration-color:var(--teal-ink);text-underline-offset:.2em}
+.spin{width:16px;height:16px;border:2px solid currentColor;border-right-color:transparent;border-radius:50%;animation:spin .7s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* ===== Responsive ===== */
+@media (max-width:980px){
+  .manifesto,.journey-inner,.sec-head,.check-grid,.split,.book-grid{grid-template-columns:minmax(0,1fr)}
+  .report{position:static}
+  .proc{grid-template-columns:repeat(3,minmax(0,1fr));row-gap:2.4rem}
+  .proc::before,.proc-fill{display:none}
+  /* journey on phones and tablets: tabs + swipeable phone, no scroll hijacking */
+  .journey{padding-block:var(--section)}
+  .journey-inner{gap:1.4rem;min-height:0}
+  .journey h2{font-size:clamp(1.9rem,7vw,2.6rem);max-width:none}
+  .steps{display:flex;flex-wrap:wrap;gap:.45rem;margin-top:1.1rem;border-left:0}
+  .step{padding:0;margin:0;border:0}
+  .step p{display:none}
+  .step button{padding:.48rem .95rem;border-radius:999px;border:1px solid var(--wall-line);background:#fff;color:var(--ink);transition:background .3s,color .3s,border-color .3s}
+  .step b{font-size:.98rem;gap:.4rem}
+  .step.on button{background:var(--ink);color:var(--wall);border-color:var(--ink)}
+  .step.on b small{color:var(--teal)}
+  .step-caption{display:block;color:var(--ink-2);margin-top:.9rem;min-height:3.2em;font-size:1rem;max-width:46ch}
+  .phone-label{display:none}
+  .phone{width:min(300px,78vw);margin-top:0;transform:none}
+  .screens{display:flex;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scrollbar-width:none;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch;touch-action:pan-x pan-y}
+  .screens::-webkit-scrollbar{display:none}
+  .scr{position:relative;inset:auto;flex:0 0 100%;height:100%;scroll-snap-align:start;scroll-snap-stop:always;clip-path:none!important;transition:none}
+  .swipe-hint{display:flex;align-items:center;justify-content:center;gap:.7rem;margin-top:1rem;font-size:.88rem;color:var(--ink-2);font-weight:600}
+  .dots{display:flex;gap:6px}
+  .dots i{width:7px;height:7px;border-radius:50%;background:var(--wall-line);transition:background .3s,width .3s}
+  .dots i.on{background:var(--ink);width:18px;border-radius:4px}
+  .stage3d{padding-bottom:0}
+  .example-tag{position:static;transform:none;margin-top:.4rem;display:block;text-align:center}
+}
+@media (max-width:899px){
+  .plans-track{flex-direction:column}
+  .plan{flex:none;width:100%}
+}
+@media (max-width:640px){
+  .plan ul{grid-template-columns:minmax(0,1fr)}
+  .qrow{grid-template-columns:minmax(0,1fr)}
+  .proc{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .floors li{grid-template-columns:minmax(0,1fr);gap:.2rem}
+  .mq-b{-webkit-text-stroke-width:1.5px}
+  .fgrid{grid-template-columns:minmax(0,1fr)}
+}
+@media (prefers-reduced-motion:reduce){
+  .hero h1 .line>span,.scroll-cue i::after,.spin{animation:none}
+  .scr,.bub{transition:none}
+}
+</style>
+
+<a class="skip" href="#main">Skip to content</a>
+<header class="top" id="siteHeader">
+  <div class="wrap top-row">
+    <a class="brand" href="#top"><img src="assets/logo-header.webp" width="171" height="48" alt="Clinivo Media"></a>
+    <nav class="nav" aria-label="Main">
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu"><i aria-hidden="true"></i>Menu</button>
+      <ul id="menu">
+        <li><a href="#doctors">Why us</a></li>
+        <li><a href="#plans">Plans</a></li>
+        <li><a href="#process">How we work</a></li>
+        <li><a href="#checkup">Health check</a></li>
+        <li><a class="nav-cta" href="#book">Book a consultation</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="ticker" aria-hidden="true"><div class="wrap"><canvas class="led" id="ticker"></canvas></div></div>
+</header>
+
+<main id="main">
+  <span id="top"></span>
+  <section class="hero" id="hero" aria-labelledby="hero-title">
+    <canvas id="gl" aria-hidden="true"></canvas>
+    <img class="hero-fallback" src="assets/hero-mark.webp" width="480" height="465" alt="" aria-hidden="true" fetchpriority="high">
+    <div class="hero-vignette"></div>
+    <div class="hero-copy">
+      <div class="wrap">
+        <h1 id="hero-title"><span class="line"><span>Built by doctors.</span></span><span class="line"><span><em>For doctors.</em></span></span></h1>
+        <p class="lede">Your next patient is already searching. Clinivo Media builds and runs the website, Instagram and Google profile for doctors, clinics and hospitals.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#book" data-cta="hero">Book a consultation
+            <svg viewBox="0 0 18 18" aria-hidden="true"><path d="M2 9h12M10 4l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2"/></svg></a>
+          <a class="text-link" href="#checkup">Check your practice's digital health</a>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-cue" aria-hidden="true">Scroll to step inside <i></i></div>
+  </section>
+
+  <section class="wall doctors" id="doctors" aria-labelledby="doctors-title">
+    <div class="marquee" aria-hidden="true">
+      <div class="mq mq-a"><span>Built by doctors</span><svg viewBox="0 0 20 20"><path d="M7 1h6v6h6v6h-6v6H7v-6H1V7h6z" fill="#1FB5C4"/></svg><span>For doctors</span><svg viewBox="0 0 20 20"><path d="M7 1h6v6h6v6h-6v6H7v-6H1V7h6z" fill="#1FB5C4"/></svg><span>Built by doctors</span></div>
+      <div class="mq mq-b"><span>For doctors</span><svg viewBox="0 0 20 20"><path d="M7 1h6v6h6v6h-6v6H7v-6H1V7h6z" fill="#0A6E7A"/></svg><span>Built by doctors</span><svg viewBox="0 0 20 20"><path d="M7 1h6v6h6v6h-6v6H7v-6H1V7h6z" fill="#0A6E7A"/></svg><span>For doctors</span></div>
+    </div>
+    <div class="wrap manifesto">
+      <h2 id="doctors-title">We speak your language.</h2>
+      <div>
+        <p class="reveal">Clinivo Media is built by doctors, for doctors. We know how a patient decides whom to trust, what medical advertising rules in India allow, and why your reputation matters more than reach. So we build your presence the way you practise: carefully, honestly and for the long term.</p>
+        <ul class="facts"><li>Healthcare only</li><li>Ethical, patient-first content</li><li>No inflated promises</li><li>One partner for web, social and Google</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="journey" id="journey" aria-labelledby="journey-title">
+    <div class="wrap journey-inner">
+      <div>
+        <h2 id="journey-title">Patients decide before they walk in.</h2>
+        <ol class="steps" id="steps">
+          <li class="step on" data-i="0"><button type="button" aria-controls="screens"><b><small>1</small>Search</b></button><p>They search Google for a doctor near them. We make your profile complete, accurate and easy to find.</p></li>
+          <li class="step" data-i="1"><button type="button" aria-controls="screens"><b><small>2</small>Compare</b></button><p>They check your website and Instagram. We make both look as careful as your consultations.</p></li>
+          <li class="step" data-i="2"><button type="button" aria-controls="screens"><b><small>3</small>Decide</b></button><p>They message to book. We make that one tap away, straight into WhatsApp.</p></li>
+        </ol>
+        <p class="step-caption" id="stepCaption" aria-live="polite">They search Google for a doctor near them. We make your profile complete, accurate and easy to find.</p>
+      </div>
+      <div class="stage3d">
+        <span class="phone-label" id="phoneLabel" aria-hidden="true">1 · Google search</span>
+        <div class="phone" id="phone" role="group" aria-label="Example phone screens: a Google search result, a clinic website, and a WhatsApp booking chat">
+          <div class="notch"></div>
+          <div class="screens" id="screens">
+            <div class="scr on" data-s="0">
+              <div class="g-bar"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="5" fill="none" stroke="#5f6470" stroke-width="1.6"/><path d="M11 11l3.5 3.5" stroke="#5f6470" stroke-width="1.6"/></svg>dermatologist near me</div>
+              <div class="g-tabs" aria-hidden="true"><span>All</span><span>Maps</span><span>Images</span><span>News</span></div>
+              <div class="g-map"><svg viewBox="0 0 270 150" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Map with a pin on the clinic"><rect width="270" height="150" fill="#E8EEF2"/><path d="M-10 40 Q80 60 140 30 T290 50" stroke="#fff" stroke-width="9" fill="none"/><path d="M60 -10 L90 160" stroke="#fff" stroke-width="7"/><path d="M180 -10 Q170 80 210 160" stroke="#fff" stroke-width="6" fill="none"/><path d="M-10 115 L290 100" stroke="#FCE7A8" stroke-width="7"/><rect x="100" y="70" width="44" height="22" rx="3" fill="#D7E6DA"/><circle cx="40" cy="80" r="5" fill="#9AA6B2"/><circle cx="230" cy="80" r="5" fill="#9AA6B2"/><g transform="translate(150 52)"><path d="M0 26 C-14 10 -12 -2 0 -2 C12 -2 14 10 0 26z" fill="#E5483C"/><circle cx="0" cy="8" r="4.5" fill="#fff"/></g></svg></div>
+              <div class="g-card"><b>Dr. Ananya Rao Skin Clinic</b><span><span class="stars" aria-label="Rated 4.8 out of 5">★★★★★</span> 4.8 <span class="muted">(212) · Dermatologist</span></span><span><span class="open">Open</span> <span class="muted">· Closes 8 pm</span></span><div class="g-btns"><span class="hl">Call</span><span>Directions</span><span>Website</span></div></div>
+            </div>
+            <div class="scr scr-site" data-s="1">
+              <div class="s-nav"><span>Rao Skin Clinic</span><i aria-hidden="true"></i></div>
+              <div class="s-hero"><b>Healthy skin, explained clearly.</b><p>Dr. Ananya Rao · MBBS, MD Dermatology</p><span class="wa">Book on WhatsApp</span></div>
+              <div class="s-chips"><span>Acne</span><span>Pigmentation</span><span>Hair loss</span><span>Eczema</span><span>Allergy</span></div>
+              <div class="s-ig"><small>Latest on Instagram</small><div class="s-grid"><span>Acne myths, busted</span><span>SPF 101</span><span>Meet the team</span><span>When to see a doctor</span><span>Monsoon skin care</span><span>Clinic hours</span></div></div>
+            </div>
+            <div class="scr scr-wa" data-s="2">
+              <div class="w-head"><i>RS</i><div><b>Rao Skin Clinic</b><small>online</small></div></div>
+              <div class="w-body">
+                <span class="bub me">Hello, I found you on Google. Is there a slot tomorrow evening?<time>7:42 pm</time></span>
+                <span class="bub">Yes, 6:30 pm is available with Dr. Rao. Shall we book it?<time>7:44 pm</time></span>
+                <span class="bub me">Yes please.<time>7:44 pm</time></span>
+                <span class="bub sys">Appointment booked · Tomorrow, 6:30 pm</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="swipe-hint" aria-hidden="true"><span class="dots" id="dots"><i class="on"></i><i></i><i></i></span>Swipe the phone</p>
+        <span class="example-tag">Example practice, for illustration</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="checkup" id="checkup" aria-labelledby="check-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="check-title">How healthy is your practice online?</h2>
+        <p class="lede">Five quick questions. Answer for your practice today and get a short report with the plan that fits. Your answers stay on this page unless you choose to send them.</p>
+      </div>
+      <div class="check-grid">
+        <ol class="qs" id="qs">
+          <li class="qrow" data-k="google" data-label="Google profile"><div><b>Google profile</b><p>Patients can find your Google Business Profile with the right timings, address and phone number.</p></div><div class="seg" role="group" aria-label="Google profile"><button type="button" data-v="1" aria-pressed="false">Yes</button><button type="button" data-v="0" aria-pressed="false">Not yet</button></div></li>
+          <li class="qrow" data-k="reviews" data-label="Reviews"><div><b>Reviews</b><p>You regularly ask satisfied patients to leave a Google review.</p></div><div class="seg" role="group" aria-label="Reviews"><button type="button" data-v="1" aria-pressed="false">Yes</button><button type="button" data-v="0" aria-pressed="false">Not yet</button></div></li>
+          <li class="qrow" data-k="website" data-label="Website"><div><b>Website</b><p>You have your own website, and it works well on a phone.</p></div><div class="seg" role="group" aria-label="Website"><button type="button" data-v="1" aria-pressed="false">Yes</button><button type="button" data-v="0" aria-pressed="false">Not yet</button></div></li>
+          <li class="qrow" data-k="enquiry" data-label="One-tap enquiry"><div><b>One-tap enquiry</b><p>A patient can call or WhatsApp you in one tap from your website and profiles.</p></div><div class="seg" role="group" aria-label="One-tap enquiry"><button type="button" data-v="1" aria-pressed="false">Yes</button><button type="button" data-v="0" aria-pressed="false">Not yet</button></div></li>
+          <li class="qrow" data-k="instagram" data-label="Instagram"><div><b>Instagram</b><p>You post useful, professional content at least once a week.</p></div><div class="seg" role="group" aria-label="Instagram"><button type="button" data-v="1" aria-pressed="false">Yes</button><button type="button" data-v="0" aria-pressed="false">Not yet</button></div></li>
+        </ol>
+
+        <aside class="report" aria-labelledby="report-title">
+          <div class="r-head"><span id="report-title">Digital health report</span><span id="rDate"></span></div>
+          <div class="monitor">
+            <div><div class="score" id="score"><span id="scoreNum">–</span><small>/5</small></div><p class="score-label" id="scoreLabel" aria-live="polite">Answer the questions to read your vitals.</p></div>
+            <canvas id="ecg" aria-hidden="true"></canvas>
+          </div>
+          <ul class="vlist" id="vlist"></ul>
+          <div class="rx"><span class="sym" aria-hidden="true">℞</span><div><b id="rxPlan">Pending</b><p id="rxWhy">Your recommended plan appears once all five are answered.</p></div></div>
+          <div class="r-send">
+            <a class="btn btn-primary" id="rBook" href="#book" aria-disabled="true">Book a consultation with this report
+              <svg viewBox="0 0 18 18" aria-hidden="true"><path d="M2 9h12M10 4l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2"/></svg></a>
+            <div class="r-foot"><a id="rWa" href="https://wa.me/917052301258" target="_blank" rel="noopener noreferrer">Or send it on WhatsApp</a><button type="button" id="rReset">Start over</button></div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="plans" id="plans" aria-labelledby="plans-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="plans-title">Four ways to work with us.</h2>
+        <p class="lede">Start with one service or hand us your whole digital presence. Every plan is quoted after we understand your practice.</p>
+      </div>
+      <div class="plans-track" id="plansTrack">
+        <article class="plan">
+          <svg class="glyph" viewBox="0 0 64 64" aria-hidden="true"><rect x="6" y="10" width="52" height="40" rx="6" fill="none" stroke="#0B1B4D" stroke-width="3"/><path d="M6 20h52" stroke="#0B1B4D" stroke-width="3"/><circle cx="13" cy="15" r="1.6" fill="#0B1B4D"/><circle cx="19" cy="15" r="1.6" fill="#0B1B4D"/><path d="M22 56h20" stroke="#1FB5C4" stroke-width="3" stroke-linecap="round"/><path d="M28 27h6v4h4v6h-4v4h-6v-4h-4v-6h4z" fill="#1FB5C4"/></svg>
+          <h3>WebDoc</h3><p class="for">A website that reflects your practice and is easy for patients to use.</p>
+          <ul><li>Custom professional website</li><li>Doctor or clinic profile and services</li><li>WhatsApp and enquiry integration</li><li>Mobile-friendly design</li><li>Hosting and domain setup</li><li>Annual maintenance and updates</li></ul>
+          <a class="ask text-link" href="#book" data-plan="WebDoc">Book a consultation about WebDoc</a>
+        </article>
+        <article class="plan">
+          <svg class="glyph" viewBox="0 0 64 64" aria-hidden="true"><rect x="10" y="6" width="44" height="52" rx="12" fill="none" stroke="#0B1B4D" stroke-width="3"/><circle cx="32" cy="32" r="10" fill="none" stroke="#1FB5C4" stroke-width="3"/><circle cx="44" cy="17" r="2.2" fill="#0B1B4D"/></svg>
+          <h3>ContentDoc</h3><p class="for">Consistent, professional Instagram content that builds credibility.</p>
+          <ul><li>Social media strategy</li><li>Professional posts and reels</li><li>Content planning and scheduling</li><li>Captions and hashtag strategy</li><li>Doctor or clinic branding</li><li>Monthly performance insights</li></ul>
+          <a class="ask text-link" href="#book" data-plan="ContentDoc">Book a consultation about ContentDoc</a>
+        </article>
+        <article class="plan">
+          <svg class="glyph" viewBox="0 0 64 64" aria-hidden="true"><path d="M8 52h48" stroke="#0B1B4D" stroke-width="3" stroke-linecap="round"/><path d="M12 42l12-12 9 8 19-20" fill="none" stroke="#1FB5C4" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M44 18h8v8" fill="none" stroke="#1FB5C4" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <h3>GrowthDoc</h3><p class="for">Your whole digital presence, managed by one team.</p>
+          <ul><li>Website</li><li>Instagram and social</li><li>Google Business Profile</li><li>Reviews</li><li>Personal branding</li><li>Broader digital management</li></ul>
+          <a class="ask text-link" href="#book" data-plan="GrowthDoc">Book a consultation about GrowthDoc</a>
+        </article>
+        <article class="plan deep">
+          <svg class="glyph" viewBox="0 0 64 64" aria-hidden="true"><path d="M23 6h18v17h17v18H41v17H23V41H6V23h17z" fill="none" stroke="#1FB5C4" stroke-width="3" stroke-linejoin="round"/><path d="M32 23v18M23 32h18" stroke="#F2F6FF" stroke-width="3" stroke-linecap="round"/></svg>
+          <h3>ClinicScale</h3><p class="for">A consulting partnership focused on growing the clinic as a business.</p>
+          <ul><li>Consulting-led advisory</li><li>Shaped around your practice, not a fixed package</li><li>A long-term partnership</li><li>Practical guidance on growth</li></ul>
+          <a class="ask text-link" href="#book" data-plan="ClinicScale">Book a consultation about ClinicScale</a>
+        </article>
+      </div>
+      <div class="plans-progress" aria-hidden="true"><i id="plansBar"></i></div>
+    </div>
+  </section>
+
+  <section class="process" id="process" aria-labelledby="process-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="process-title">How a project moves.</h2>
+        <p class="lede">Six steps, from the first conversation to ongoing growth. You always know which one we are on.</p>
+      </div>
+      <div class="proc-wrap" style="position:relative">
+        <span class="proc-fill" aria-hidden="true"></span>
+        <ol class="proc" id="proc">
+          <li class="pnode on"><small>Step 1</small><h3>Consultation</h3><p>We listen and understand your practice.</p></li>
+          <li class="pnode on"><small>Step 2</small><h3>Strategy</h3><p>Goals and digital direction, agreed in writing.</p></li>
+          <li class="pnode on"><small>Step 3</small><h3>Creation</h3><p>We build the website, profiles and content.</p></li>
+          <li class="pnode on"><small>Step 4</small><h3>Launch</h3><p>Your digital presence goes live.</p></li>
+          <li class="pnode on"><small>Step 5</small><h3>Management</h3><p>We maintain and improve it every month.</p></li>
+          <li class="pnode on"><small>Step 6</small><h3>Growth</h3><p>We look for the next opportunity.</p></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="wall who" aria-labelledby="who-title">
+    <div class="wrap split">
+      <div>
+        <h2 id="who-title">Who we work with</h2>
+        <ul class="floors">
+          <li><b>Doctors</b><span>Independent practitioners building a trusted personal brand.</span></li>
+          <li><b>Clinics</b><span>Growing practices that need a consistent, professional presence.</span></li>
+          <li><b>Hospitals</b><span>Larger institutions that need structured digital management.</span></li>
+        </ul>
+      </div>
+      <div>
+        <h2>What you can expect</h2>
+        <ul class="promise">
+          <li><b>Clear communication</b><span>You always know what is happening and why.</span></li>
+          <li><b>Ethical, patient-first content</b><span>Professional work that respects your field.</span></li>
+          <li><b>Honest expectations</b><span>No inflated promises. Consistent, careful work.</span></li>
+          <li><b>A long-term partner</b><span>We grow alongside your practice.</span></li>
+        </ul>
+        <p class="ethics">We follow Indian medical advertising norms: no guaranteed results, no misleading claims, and no patient photos or testimonials without written consent.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="book" id="book" aria-labelledby="book-title">
+    <div class="wrap book-grid">
+      <div>
+        <h2 id="book-title">Your practice deserves to be seen, trusted and remembered.</h2>
+        <p class="lede">Book a consultation. Tell us a little about your practice and Deeptanshu will get back to you to set up a call.</p>
+        <div class="contact">
+          <div><small>Phone and WhatsApp</small><span>+91 70523 01258</span></div>
+          <div><small>Email</small><span>clinivomedia@gmail.com</span></div>
+          <div><small>Instagram</small><a href="https://www.instagram.com/clinivomedia/" target="_blank" rel="noopener noreferrer">@clinivomedia</a></div>
+        </div>
+      </div>
+
+      <div class="form-card" id="formCard">
+        <form id="bookForm" action="/api/contact" method="post" novalidate>
+          <h3>Book a consultation</h3>
+          <p class="sub">Fields marked * are required. It takes about a minute.</p>
+          <div class="fgrid">
+            <div class="f"><label for="fName">Full name *</label><input id="fName" name="name" autocomplete="name" maxlength="80" required placeholder="Dr. Ananya Rao" aria-describedby="eName"><span class="err" id="eName"></span></div>
+            <div class="f"><label for="fPhone">Phone or WhatsApp *</label><input id="fPhone" name="phone" type="tel" inputmode="tel" autocomplete="tel" maxlength="16" required placeholder="98765 43210" aria-describedby="ePhone"><span class="err" id="ePhone"></span></div>
+            <div class="f"><label for="fEmail">Email <small>(optional)</small></label><input id="fEmail" name="email" type="email" autocomplete="email" maxlength="120" placeholder="you@clinic.in" aria-describedby="eEmail"><span class="err" id="eEmail"></span></div>
+            <div class="f"><label for="fCity">City *</label><input id="fCity" name="city" autocomplete="address-level2" maxlength="60" required placeholder="Lucknow" aria-describedby="eCity"><span class="err" id="eCity"></span></div>
+            <div class="f"><label for="fClinic">Clinic or practice <small>(optional)</small></label><input id="fClinic" name="clinic" autocomplete="organization" maxlength="100" placeholder="Rao Skin Clinic"></div>
+            <div class="f"><label for="fPlan">Interested in</label>
+              <select id="fPlan" name="plan">
+                <option value="Not sure yet">Not sure yet</option>
+                <option value="WebDoc">WebDoc · website</option>
+                <option value="ContentDoc">ContentDoc · Instagram</option>
+                <option value="GrowthDoc">GrowthDoc · everything managed</option>
+                <option value="ClinicScale">ClinicScale · growth consulting</option>
+              </select></div>
+            <div class="f full"><label for="fMsg">Anything we should know? <small>(optional)</small></label><textarea id="fMsg" name="message" maxlength="1000" placeholder="Please don't include any patient details." aria-describedby="eMsg cMsg"></textarea><span class="count" id="cMsg">0 / 1000</span><span class="err" id="eMsg"></span></div>
+            <div class="hp" aria-hidden="true"><label for="fWebsite">Leave this field empty</label><input id="fWebsite" name="website" tabindex="-1" autocomplete="off"></div>
+            <input type="hidden" name="ts" id="fTs">
+            <label class="consent" for="fConsent"><input id="fConsent" name="consent" type="checkbox" value="yes" required aria-describedby="eConsent"><span>I agree that Clinivo Media can contact me about this enquiry, as described in the <a href="privacy.html">Privacy Policy</a>. *<span class="err" id="eConsent" style="display:block"></span></span></label>
+            <div class="form-status bad" id="fStatus" role="alert" hidden></div>
+            <div class="form-actions">
+              <button class="btn" type="submit" id="fSubmit">Book a consultation
+                <svg viewBox="0 0 18 18" aria-hidden="true"><path d="M2 9h12M10 4l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2"/></svg></button>
+              <small>We reply on working days.</small>
+            </div>
+          </div>
+        </form>
+        <div class="done" id="formDone" hidden tabindex="-1">
+          <span class="tick" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.2 4.2L19 7" fill="none" stroke="#081638" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <h3 id="doneTitle">Thank you. Your request is in.</h3>
+          <p id="doneText">Deeptanshu will get back to you to set up a call. If it's urgent, call or WhatsApp +91 70523 01258.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap foot-grid">
+    <div><img src="assets/logo-footer.webp" width="178" height="50" alt="Clinivo Media" loading="lazy"><p>Built by doctors, for doctors.</p></div>
+    <nav class="foot-links" aria-label="Footer">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms &amp; Conditions</a>
+      <button type="button" data-cookie-settings>Cookie settings</button>
+      <a href="https://www.instagram.com/clinivomedia/" target="_blank" rel="noopener noreferrer">Instagram</a>
+    </nav>
+  </div>
+  <div class="wrap foot-base"><span>© 2026 Clinivo Media</span><span>Website · Social · Google</span></div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" integrity="sha384-g4NTh/Iv5PPU4xPyhEWqPcwtNXOvdaDI8LLnyYfyNZOjKJeYQyjzQ9X5275eBjpt" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" integrity="sha384-Z3REaz79l2IaAZqJsSABtTbhjgOUYyV3p90XNnAPCSHg3EMTz1fouunq9WZRtj3d" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" integrity="sha384-B2WBjDzEjJpYvhmi2UyEn7rektqkf5suS6sNoyyrf0EBAwBHdkiXxIlU0V5Ru2ed" crossorigin="anonymous"></script>
+
+<script>
+window.CLV = { heroP: 0, px: 0, py: 0 };
+document.documentElement.classList.add('js');
+
+(() => {
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const header = document.getElementById('siteHeader');
+  const setHead = () => document.documentElement.style.setProperty('--head', header.offsetHeight + 'px');
+  setHead(); addEventListener('resize', setHead);
+  const headerH = () => header.offsetHeight;
+  const track = (n, p) => window.clvTrack && window.clvTrack(n, p);
+
+  /* ---------- LED ticker ---------- */
+  const AMBER = '#FFB020', OFF = 'rgba(255,176,32,.11)';
+  const G = {'A':'01110 10001 10001 11111 10001 10001 10001','B':'11110 10001 10001 11110 10001 10001 11110','C':'01110 10001 10000 10000 10000 10001 01110','D':'11100 10010 10001 10001 10001 10010 11100','E':'11111 10000 10000 11110 10000 10000 11111','F':'11111 10000 10000 11110 10000 10000 10000','G':'01110 10001 10000 10111 10001 10001 01111','H':'10001 10001 10001 11111 10001 10001 10001','I':'01110 00100 00100 00100 00100 00100 01110','K':'10001 10010 10100 11000 10100 10010 10001','L':'10000 10000 10000 10000 10000 10000 11111','M':'10001 11011 10101 10101 10001 10001 10001','N':'10001 10001 11001 10101 10011 10001 10001','O':'01110 10001 10001 10001 10001 10001 01110','P':'11110 10001 10001 11110 10000 10000 10000','R':'11110 10001 10001 11110 10100 10010 10001','S':'01111 10000 10000 01110 00001 00001 11110','T':'11111 00100 00100 00100 00100 00100 00100','U':'10001 10001 10001 10001 10001 10001 01110','V':'10001 10001 10001 10001 10001 01010 00100','W':'10001 10001 10001 10101 10101 10101 01010','Y':'10001 10001 10001 01010 00100 00100 00100',' ':'00000 00000 00000 00000 00000 00000 00000','·':'00000 00000 00000 00100 00000 00000 00000',',':'00000 00000 00000 00000 00110 00100 01000'};
+  const glyph = ch => (G[ch] || G[' ']).split(' ').map(r => [...r].map(b => b === '1'));
+  const textCols = s => { const c = []; for (const ch of s) { const g = glyph(ch); for (let x = 0; x < 5; x++) c.push(g.map(r => r[x])); c.push(Array(7).fill(false)); } return c; };
+  const tk = document.getElementById('ticker');
+  const cols = textCols('  BUILT BY DOCTORS, FOR DOCTORS · WEBSITE · INSTAGRAM · GOOGLE PROFILE · REVIEWS · PERSONAL BRANDING · CLINIC GROWTH ·');
+  let tctx, tn, tW, tH, toff = 0; const pitch = 2.6;
+  function tSize() { const dpr = Math.min(devicePixelRatio || 1, 2); tW = tk.clientWidth; tn = Math.floor(tW / pitch); tH = pitch * 7; tk.style.height = tH + 'px'; tk.width = tW * dpr; tk.height = tH * dpr; tctx = tk.getContext('2d'); tctx.setTransform(dpr, 0, 0, dpr, 0, 0); tDraw(); setHead(); }
+  function tDraw() { tctx.clearRect(0, 0, tW, tH); const L = cols.length, r = pitch * .36; for (let y = 0; y < 7; y++) for (let x = 0; x < tn; x++) { const on = cols[(x + toff) % L][y]; tctx.fillStyle = on ? AMBER : OFF; tctx.beginPath(); tctx.arc(x * pitch + pitch / 2, y * pitch + pitch / 2, on ? r : r * .8, 0, 6.283); tctx.fill(); } }
+  tSize(); addEventListener('resize', tSize);
+  if (!reduce) { let last = 0; const loop = t => { requestAnimationFrame(loop); if (t - last > 40 && !document.hidden) { toff++; tDraw(); last = t; } }; requestAnimationFrame(loop); }
+
+  /* ---------- Phone: shared state ---------- */
+  const steps = [...document.querySelectorAll('.step')], scrs = [...document.querySelectorAll('.scr')];
+  const screensEl = document.getElementById('screens'), caption = document.getElementById('stepCaption'), plabel = document.getElementById('phoneLabel');
+  const dots = [...document.querySelectorAll('#dots i')];
+  const screenNames = ['1 · Google search', '2 · Your website', '3 · WhatsApp booking'];
+  const carouselMQ = matchMedia('(max-width: 980px)');
+  let cur = 0;
+  function show(i) {
+    if (i === cur) return; cur = i;
+    steps.forEach((s, k) => s.classList.toggle('on', k === i));
+    scrs.forEach((s, k) => { s.classList.toggle('on', k === i); s.classList.toggle('past', k < i); });
+    dots.forEach((d, k) => d.classList.toggle('on', k === i));
+    caption.textContent = steps[i].querySelector('p').textContent;
+    plabel.textContent = screenNames[i]; plabel.classList.remove('bump'); void plabel.offsetWidth; plabel.classList.add('bump');
+  }
+  // Phones/tablets: the phone is a native swipe carousel. Scroll position decides the step.
+  let swipeRaf = 0;
+  screensEl.addEventListener('scroll', () => {
+    if (!carouselMQ.matches) return;
+    cancelAnimationFrame(swipeRaf);
+    swipeRaf = requestAnimationFrame(() => show(Math.max(0, Math.min(2, Math.round(screensEl.scrollLeft / screensEl.clientWidth)))));
+  }, { passive: true });
+  let desktopJump = null;
+  steps.forEach(s => s.querySelector('button').addEventListener('click', () => {
+    const i = +s.dataset.i;
+    if (carouselMQ.matches) screensEl.scrollTo({ left: i * screensEl.clientWidth, behavior: reduce ? 'auto' : 'smooth' });
+    else if (desktopJump) desktopJump(i);
+    else show(i);
+  }));
+
+  /* ---------- Health check ---------- */
+  const rows = [...document.querySelectorAll('.qrow')], ans = {};
+  const labels = Object.fromEntries(rows.map(r => [r.dataset.k, r.dataset.label]));
+  const vlist = document.getElementById('vlist'), scoreNum = document.getElementById('scoreNum'), scoreEl = document.getElementById('score'), scoreLabel = document.getElementById('scoreLabel');
+  const rxPlan = document.getElementById('rxPlan'), rxWhy = document.getElementById('rxWhy'), rBook = document.getElementById('rBook'), rWa = document.getElementById('rWa');
+  document.getElementById('rDate').textContent = new Date().toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' });
+  rows.forEach(r => {
+    const li = document.createElement('li'); li.dataset.k = r.dataset.k;
+    const nm = document.createElement('span'), st = document.createElement('span');
+    nm.textContent = r.dataset.label; st.className = 'st'; st.textContent = 'Not checked'; li.append(nm, st); vlist.append(li);
+    r.querySelectorAll('button').forEach(b => b.addEventListener('click', () => {
+      ans[r.dataset.k] = +b.dataset.v;
+      r.querySelectorAll('button').forEach(x => x.setAttribute('aria-pressed', String(x === b)));
+      update();
+    }));
+  });
+  const ecgState = { score: -1 };
+  let report = { plan: '', summary: '' };
+  function update() {
+    const answered = rows.map(r => r.dataset.k).filter(k => k in ans), yes = answered.filter(k => ans[k] === 1).length, no = answered.filter(k => ans[k] === 0);
+    [...vlist.children].forEach(li => { const st = li.querySelector('.st'), k = li.dataset.k;
+      if (!(k in ans)) { st.className = 'st'; st.textContent = 'Not checked'; }
+      else if (ans[k]) { st.className = 'st ok'; st.textContent = 'Healthy'; }
+      else { st.className = 'st bad'; st.textContent = 'Needs attention'; } });
+    scoreNum.textContent = answered.length ? yes : '–';
+    ecgState.score = answered.length === 5 ? yes : answered.length ? -.5 : -1;
+    scoreEl.style.color = answered.length < 5 ? '' : yes >= 4 ? 'var(--teal)' : 'var(--amber)';
+    let plan = 'Pending', why;
+    if (answered.length < 5) {
+      why = answered.length ? `${5 - answered.length} more to go. Your recommended plan appears once all five are answered.` : 'Your recommended plan appears once all five are answered.';
+      scoreLabel.textContent = answered.length ? `${answered.length} of 5 answered.` : 'Answer the questions to read your vitals.';
+    } else {
+      scoreLabel.textContent = yes === 5 ? 'Excellent vitals. Time to grow.' : yes >= 3 ? 'Stable, with a few gaps.' : 'A few areas need attention.';
+      const web = !ans.website || !ans.enquiry, content = !ans.instagram, google = !ans.google || !ans.reviews;
+      const areas = [web, content, google].filter(Boolean).length;
+      if (!no.length) { plan = 'ClinicScale'; why = 'Your basics are in place. The next step is growing the clinic as a business.'; }
+      else if (areas >= 2) { plan = 'GrowthDoc'; why = 'There are gaps in more than one place. One team managing website, social and Google closes them together.'; }
+      else if (web) { plan = 'WebDoc'; why = 'A phone-friendly website with one-tap WhatsApp and call buttons closes this gap.'; }
+      else if (content) { plan = 'ContentDoc'; why = 'Regular, professional posts and reels keep patients seeing your expertise.'; }
+      else { plan = 'GrowthDoc'; why = 'Google profile and reviews are managed as part of GrowthDoc.'; }
+      track('health_check_complete', { score: yes, plan });
+    }
+    rxPlan.textContent = plan; rxWhy.textContent = why;
+    report.plan = answered.length === 5 ? plan : '';
+    report.summary = answered.length ? `Digital health check: ${yes}/5` + (answered.length < 5 ? ` (${answered.length} of 5 answered)` : '') + '.' + (no.length ? ` Needs attention: ${no.map(k => labels[k]).join(', ')}.` : '') + (report.plan ? ` Suggested plan: ${plan}.` : '') : '';
+    rWa.href = 'https://wa.me/917052301258?text=' + encodeURIComponent(`Hello Deeptanshu, I did the ${report.summary || 'digital health check'} I would like a consultation call.`.replace('the Digital', 'the digital'));
+    rBook.setAttribute('aria-disabled', answered.length ? 'false' : 'true');
+  }
+  document.getElementById('rReset').addEventListener('click', () => { for (const k in ans) delete ans[k]; rows.forEach(r => r.querySelectorAll('button').forEach(b => b.setAttribute('aria-pressed', 'false'))); update(); });
+  update();
+
+  /* ECG monitor */
+  const ec = document.getElementById('ecg'); let ex, eW, eH, head = 0, buf = [], phase = 0;
+  function eSize() { const dpr = Math.min(devicePixelRatio || 1, 2); eW = ec.clientWidth; eH = ec.clientHeight; ec.width = eW * dpr; ec.height = eH * dpr; ex = ec.getContext('2d'); ex.setTransform(dpr, 0, 0, dpr, 0, 0); buf = new Array(Math.max(10, Math.ceil(eW))).fill(0); head = 0; }
+  const beat = t => { const g = (c, w, h) => h * Math.exp(-((t - c) ** 2) / (2 * w * w)); return g(.18, .025, .12) - g(.36, .012, .16) + g(.40, .014, 1) - g(.44, .012, .28) + g(.66, .05, .22); };
+  function eStep() {
+    const s = ecgState.score, amp = s < 0 ? .22 : .38 + s * .12, bpm = s < 0 ? 62 : 66 + (5 - s) * 7;
+    for (let i = 0; i < 2; i++) { phase += bpm / 60 / 60 * .7; head = (head + 1) % buf.length; buf[head] = beat(phase % 1) * amp; }
+    ex.clearRect(0, 0, eW, eH);
+    ex.strokeStyle = 'rgba(169,184,217,.1)'; ex.lineWidth = 1;
+    for (let x = 0; x < eW; x += 14) { ex.beginPath(); ex.moveTo(x + .5, 0); ex.lineTo(x + .5, eH); ex.stroke(); }
+    for (let y = 0; y < eH; y += 14) { ex.beginPath(); ex.moveTo(0, y + .5); ex.lineTo(eW, y + .5); ex.stroke(); }
+    const col = s < 0 ? '#A9B8D9' : s >= 4 ? '#1FB5C4' : '#FFB020', base = eH * .64, L = buf.length;
+    ex.strokeStyle = col; ex.lineWidth = 2; ex.lineJoin = 'round'; ex.beginPath();
+    for (let x = 0; x < L; x++) { const y = base - buf[(head + 1 + x) % L] * eH * .56; x ? ex.lineTo(x, y) : ex.moveTo(x, y); }
+    ex.stroke(); ex.fillStyle = col; ex.beginPath(); ex.arc(L - 1, base - buf[head] * eH * .56, 3, 0, 6.283); ex.fill();
+  }
+  eSize(); for (let i = 0; i < 400; i++) eStep();
+  addEventListener('resize', () => { eSize(); for (let i = 0; i < 400; i++) eStep(); });
+  if (!reduce) { const loop = () => { requestAnimationFrame(loop); if (document.hidden) return; const r = ec.getBoundingClientRect(); if (r.bottom > 0 && r.top < innerHeight) eStep(); }; loop(); }
+
+  /* ---------- Booking form ---------- */
+  const form = document.getElementById('bookForm'), done = document.getElementById('formDone'), status = document.getElementById('fStatus'), submit = document.getElementById('fSubmit');
+  const F = id => document.getElementById(id);
+  const fPlan = F('fPlan'), fMsg = F('fMsg'), cMsg = F('cMsg');
+  F('fTs').value = String(Date.now());
+  const rules = {
+    fName: v => !v.trim() ? 'Please enter your name.' : !/^[\p{L}][\p{L} .'-]{1,79}$/u.test(v.trim()) ? 'Use letters only, at least 2 characters.' : '',
+    fPhone: v => { const d = v.replace(/[\s()-]/g, ''); return !d ? 'Please enter a phone or WhatsApp number.' : !/^(?:\+?91|0)?[6-9]\d{9}$/.test(d) ? 'Enter a 10-digit Indian mobile number, e.g. 98765 43210.' : ''; },
+    fEmail: v => v.trim() && !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim()) ? 'This email address looks incomplete.' : '',
+    fCity: v => !v.trim() ? 'Please enter your city.' : v.trim().length < 2 ? 'City name looks too short.' : '',
+    fMsg: v => v.length > 1000 ? 'Please keep the message under 1000 characters.' : '',
+    fConsent: (v, el) => !el.checked ? 'Please tick this box so we can contact you.' : ''
+  };
+  const errFor = { fName: 'eName', fPhone: 'ePhone', fEmail: 'eEmail', fCity: 'eCity', fMsg: 'eMsg', fConsent: 'eConsent' };
+  function check(id) {
+    const el = F(id), msg = rules[id](el.value, el);
+    F(errFor[id]).textContent = msg; el.setAttribute('aria-invalid', msg ? 'true' : 'false'); return !msg;
+  }
+  Object.keys(rules).forEach(id => {
+    const el = F(id);
+    el.addEventListener('blur', () => { if (el.value || el.type === 'checkbox') check(id); });
+    el.addEventListener('input', () => { if (el.getAttribute('aria-invalid') === 'true') check(id); });
+    el.addEventListener('change', () => { if (el.type === 'checkbox') check(id); });
+  });
+  fMsg.addEventListener('input', () => { cMsg.textContent = `${fMsg.value.length} / 1000`; });
+
+  function prefill(plan, note) {
+    if (plan) fPlan.value = plan;
+    if (note && !fMsg.value.includes(note)) { fMsg.value = (note + (fMsg.value ? '\n' + fMsg.value : '')).slice(0, 1000); fMsg.dispatchEvent(new Event('input')); }
+  }
+  document.querySelectorAll('[data-plan]').forEach(a => a.addEventListener('click', () => { prefill(a.dataset.plan); track('select_plan', { plan: a.dataset.plan }); }));
+  rBook.addEventListener('click', () => { prefill(report.plan, report.summary); track('health_check_book'); });
+  document.querySelectorAll('a[href="#book"]').forEach(a => a.addEventListener('click', () => setTimeout(() => F('fName').focus({ preventScroll: true }), 900)));
+
+  const waFallback = data => 'https://wa.me/917052301258?text=' + encodeURIComponent(
+    `Hello Deeptanshu, I'd like to book a consultation.\nName: ${data.get('name')}\nPhone: ${data.get('phone')}\nCity: ${data.get('city')}` +
+    (data.get('clinic') ? `\nClinic: ${data.get('clinic')}` : '') + `\nInterested in: ${data.get('plan')}` + (data.get('message') ? `\n${data.get('message')}` : ''));
+
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+    status.hidden = true;
+    const ok = Object.keys(rules).map(check).every(Boolean);
+    if (!ok) { const first = form.querySelector('[aria-invalid="true"]'); first && first.focus(); return; }
+    const data = new FormData(form);
+    submit.disabled = true; const label = submit.innerHTML; submit.innerHTML = '<span class="spin" aria-hidden="true"></span> Sending';
+    let sent = false, msg = '';
+    try {
+      const ctrl = new AbortController(); const t = setTimeout(() => ctrl.abort(), 12000);
+      const res = await fetch(form.getAttribute('action'), { method: 'POST', body: new URLSearchParams(data), headers: { 'Accept': 'application/json' }, signal: ctrl.signal });
+      clearTimeout(t);
+      const json = await res.json().catch(() => null);
+      if (res.ok && json && json.ok) sent = true; else msg = (json && json.error) || '';
+    } catch (err) { msg = ''; }
+    submit.disabled = false; submit.innerHTML = label;
+    if (sent) {
+      track('generate_lead', { plan: data.get('plan') });
+      form.hidden = true; done.hidden = false;
+      const first = String(data.get('name')).trim().split(/\s+/).find(w => !/^dr\.?$/i.test(w)) || '';
+      F('doneTitle').textContent = `Thank you${first ? ', ' + first : ''}. Your request is in.`;
+      done.focus();
+    } else {
+      status.hidden = false; status.textContent = '';
+      status.append(msg || "We couldn't send this right now. ");
+      const a = document.createElement('a'); a.href = waFallback(data); a.target = '_blank'; a.rel = 'noopener noreferrer'; a.textContent = 'Send the same details on WhatsApp instead';
+      a.style.color = 'inherit';
+      status.append(a, '.');
+    }
+  });
+
+  /* ---------- Plan cards: 3D tilt ---------- */
+  if (!reduce && matchMedia('(hover:hover)').matches) document.querySelectorAll('.plan').forEach(p => {
+    p.addEventListener('pointermove', e => { const r = p.getBoundingClientRect(), x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5; p.style.transform = `perspective(1000px) rotateX(${(-y * 6).toFixed(2)}deg) rotateY(${(x * 8).toFixed(2)}deg) translateZ(6px)`; });
+    p.addEventListener('pointerleave', () => { p.style.transform = ''; });
+  });
+  addEventListener('pointermove', e => { window.CLV.px = e.clientX / innerWidth - .5; window.CLV.py = e.clientY / innerHeight - .5; }, { passive: true });
+
+  /* ---------- Scroll choreography ---------- */
+  const proc = document.getElementById('proc'), nodes = [...proc.querySelectorAll('.pnode')], procFill = document.querySelector('.proc-fill');
+  const setProc = p => { procFill.style.transform = `scaleX(${p})`; nodes.forEach((nd, i) => nd.classList.toggle('on', p >= i / (nodes.length - 1) - .02)); };
+
+  if (!window.gsap || !window.ScrollTrigger || reduce) return;
+  gsap.registerPlugin(ScrollTrigger);
+  ScrollTrigger.config({ ignoreMobileResize: true });
+
+  let lenis = null;
+  if (window.Lenis) {
+    lenis = new Lenis({ lerp: .1, smoothWheel: true, wheelMultiplier: 1 });
+    lenis.on('scroll', ScrollTrigger.update);
+    gsap.ticker.add(t => lenis.raf(t * 1000)); gsap.ticker.lagSmoothing(0);
+  }
+  document.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener('click', e => {
+    const id = a.getAttribute('href'); if (id.length < 2) return; const el = document.querySelector(id); if (!el) return;
+    if (a.getAttribute('aria-disabled') === 'true') { e.preventDefault(); return; }
+    e.preventDefault(); lenis ? lenis.scrollTo(el, { offset: id === '#top' ? 0 : -headerH(), duration: 1.3 }) : el.scrollIntoView({ behavior: 'smooth' });
+  }));
+
+  const mm = gsap.matchMedia();
+
+  // HERO: pin and fly through the cross (shorter on phones)
+  mm.add({ desk: '(min-width: 761px)', mob: '(max-width: 760px)' }, ctx => {
+    gsap.timeline({ scrollTrigger: { trigger: '#hero', start: () => 'top top+=' + headerH(), end: ctx.conditions.mob ? '+=100%' : '+=140%', pin: true, scrub: true, anticipatePin: 1, onUpdate: s => { window.CLV.heroP = s.progress; } } })
+      .to('.hero-copy', { y: -70, scale: .92, autoAlpha: 0, duration: .35, ease: 'power2.in' }, 0)
+      .to('.scroll-cue', { autoAlpha: 0, duration: .1 }, 0)
+      .to('.hero-vignette', { autoAlpha: 0, duration: .5 }, .2)
+      .to({}, { duration: 1 }, 0);
+  });
+
+  // DOCTORS: marquee drift + word-by-word reveal
+  gsap.fromTo('.mq-a', { xPercent: 0 }, { xPercent: -26, ease: 'none', scrollTrigger: { trigger: '.doctors', start: 'top bottom', end: 'bottom top', scrub: true } });
+  gsap.fromTo('.mq-b', { xPercent: -26 }, { xPercent: 0, ease: 'none', scrollTrigger: { trigger: '.doctors', start: 'top bottom', end: 'bottom top', scrub: true } });
+  const rv = document.querySelector('.reveal');
+  const words = rv.textContent.trim().split(/\s+/); rv.textContent = '';
+  words.forEach((w, i) => { const s = document.createElement('span'); s.className = 'w'; s.textContent = w; rv.append(s, i < words.length - 1 ? ' ' : ''); });
+  gsap.fromTo('.reveal .w', { color: '#5B6B88' }, { color: '#0B1B4D', stagger: .1, ease: 'none', scrollTrigger: { trigger: '.reveal', start: 'top 82%', end: 'bottom 50%', scrub: true } });
+  gsap.from('.facts li', { y: 24, rotate: -3, duration: .9, ease: 'back.out(2)', stagger: .07, immediateRender: false, scrollTrigger: { trigger: '.facts', start: 'top 92%' } });
+
+  // JOURNEY (desktop): screens wipe in continuously with the scroll, each one holds long enough to read.
+  mm.add('(min-width: 981px)', () => {
+    screensEl.classList.add('driven');
+    const bubs = scrs[2].querySelectorAll('.bub');
+    gsap.set([scrs[1], scrs[2]], { clipPath: 'inset(100% 0% 0% 0%)' });
+    gsap.set(scrs[0], { clipPath: 'inset(0% 0% 0% 0%)' });
+    gsap.set(bubs, { autoAlpha: 0, y: 10 });
+    const jt = gsap.timeline({ defaults: { ease: 'none' }, scrollTrigger: {
+      trigger: '#journey', start: () => 'top top+=' + headerH(), end: '+=190%', pin: true, scrub: 1, anticipatePin: 1,
+      onUpdate: s => { const p = s.progress; show(p < .33 ? 0 : p < .67 ? 1 : 2); } } });
+    jt.fromTo('#phone', { rotateY: -8, rotateX: 3 }, { rotateY: 5, rotateX: -1, duration: 1 }, 0)
+      .to(scrs[1], { clipPath: 'inset(0% 0% 0% 0%)', duration: .17, ease: 'power2.inOut' }, .22)
+      .to(scrs[2], { clipPath: 'inset(0% 0% 0% 0%)', duration: .17, ease: 'power2.inOut' }, .58)
+      .to(bubs, { autoAlpha: 1, y: 0, duration: .05, stagger: .035 }, .72);
+    const holds = [.08, .46, .9];
+    desktopJump = i => { const st = jt.scrollTrigger, y = st.start + (st.end - st.start) * holds[i]; lenis ? lenis.scrollTo(y, { duration: 1.2 }) : scrollTo({ top: y, behavior: 'smooth' }); };
+    return () => { desktopJump = null; screensEl.classList.remove('driven'); gsap.set([...scrs, ...bubs, '#phone'], { clearProps: 'all' }); };
+  });
+
+  // PLANS: horizontal travel on desktop
+  mm.add('(min-width: 900px)', () => {
+    const trackEl = document.getElementById('plansTrack'), bar = document.getElementById('plansBar');
+    const dist = () => Math.max(0, trackEl.scrollWidth - trackEl.clientWidth);
+    bar.style.setProperty('--pp', 0);
+    gsap.to(trackEl, { x: () => -dist(), ease: 'none', scrollTrigger: { trigger: '#plans', start: () => 'top top+=' + headerH(), end: () => '+=' + dist(), pin: true, scrub: .8, anticipatePin: 1, invalidateOnRefresh: true, onUpdate: s => bar.style.setProperty('--pp', s.progress) } });
+    return () => bar.style.setProperty('--pp', 1);
+  });
+
+  // PROCESS: line draws, nodes light
+  mm.add('(min-width: 981px)', () => {
+    setProc(0);
+    ScrollTrigger.create({ trigger: '#process', start: 'top 65%', end: 'bottom 80%', scrub: true, onUpdate: s => setProc(s.progress) });
+    return () => setProc(1);
+  });
+
+  // BOOK: the closing line zooms in
+  gsap.fromTo('.book h2', { scale: .82, autoAlpha: .4 }, { scale: 1, autoAlpha: 1, ease: 'none', scrollTrigger: { trigger: '.book', start: 'top bottom', end: 'top 40%', scrub: true } });
+
+  addEventListener('load', () => ScrollTrigger.refresh());
+  if (document.fonts) document.fonts.ready.then(() => ScrollTrigger.refresh());
+})();
+</script>
+
+<script type="module">
+/* 3D hero: the Clinivo cross as a doorway. Scrolling flies the camera through it into the practice.
+   Loaded after the page is ready, so text, buttons and the logo appear first. */
+const small = matchMedia('(max-width: 760px), (pointer: coarse)').matches;
+const whenIdle = () => new Promise(r => { const go = () => ('requestIdleCallback' in window ? requestIdleCallback(r, { timeout: 1500 }) : setTimeout(r, 300)); document.readyState === 'complete' ? go() : addEventListener('load', go, { once: true }); });
+// Wait for the visitor's first move, touch or scroll (or a few seconds), so the page itself loads instantly.
+const whenEngaged = () => new Promise(r => { let done = false; const fire = () => { if (done) return; done = true; ['touchstart', 'scroll', 'pointerdown', 'keydown', 'pointermove'].forEach(e => removeEventListener(e, fire)); r(); };
+  ['touchstart', 'scroll', 'pointerdown', 'keydown', 'pointermove'].forEach(e => addEventListener(e, fire, { passive: true, once: true })); setTimeout(fire, small ? 6000 : 4000); });
+await whenIdle();
+await whenEngaged();
+const THREE = await import('three');
+const { RoomEnvironment } = await import('three/addons/environments/RoomEnvironment.js');
+
+const hero = document.getElementById('hero'), canvas = document.getElementById('gl');
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+let renderer;
+try { renderer = new THREE.WebGLRenderer({ canvas, antialias: !small, alpha: true, powerPreference: 'high-performance' }); }
+catch (e) { document.documentElement.classList.add('no-gl'); throw e; }
+renderer.setPixelRatio(Math.min(devicePixelRatio, small ? 1.5 : 1.75));
+renderer.toneMapping = THREE.ACESFilmicToneMapping; renderer.toneMappingExposure = .95;
+renderer.setClearColor(0x000000, 0);
+
+const scene = new THREE.Scene();
+const pmrem = new THREE.PMREMGenerator(renderer);
+scene.environment = pmrem.fromScene(new RoomEnvironment(), 0.04).texture;
+const camera = new THREE.PerspectiveCamera(32, 1, 0.02, 100);
+
+function roundedPath(path, pts, r) {
+  const n = pts.length;
+  for (let i = 0; i < n; i++) {
+    const p0 = pts[(i - 1 + n) % n], p1 = pts[i], p2 = pts[(i + 1) % n];
+    const d1 = new THREE.Vector2(p0[0] - p1[0], p0[1] - p1[1]).normalize(), d2 = new THREE.Vector2(p2[0] - p1[0], p2[1] - p1[1]).normalize();
+    const a = [p1[0] + d1.x * r, p1[1] + d1.y * r], b = [p1[0] + d2.x * r, p1[1] + d2.y * r];
+    if (i === 0) path.moveTo(a[0], a[1]); else path.lineTo(a[0], a[1]);
+    path.quadraticCurveTo(p1[0], p1[1], b[0], b[1]);
+  }
+  path.closePath(); return path;
+}
+const crossPts = (a, L) => [[-a, L], [a, L], [a, a], [L, a], [L, -a], [a, -a], [a, -L], [-a, -L], [-a, -a], [-L, -a], [-L, a], [-a, a]];
+const A = 1.0, L = 2.7, T = .34;
+const innerPts = crossPts(A - T, L - T);
+const outer = roundedPath(new THREE.Shape(), crossPts(A, L), .38);
+outer.holes.push(roundedPath(new THREE.Path(), innerPts.slice().reverse(), .22));
+const crossGeo = new THREE.ExtrudeGeometry(outer, { depth: .42, bevelEnabled: true, bevelThickness: .12, bevelSize: .09, bevelSegments: 8, curveSegments: 18 });
+crossGeo.translate(0, 0, -.21);
+const cross = new THREE.Mesh(crossGeo, new THREE.MeshStandardMaterial({ color: 0x1FB5C4, metalness: 0, roughness: .62, envMapIntensity: .55 }));
+
+const portal = new THREE.Mesh(new THREE.ShapeGeometry(roundedPath(new THREE.Shape(), innerPts, .22), 24), new THREE.MeshBasicMaterial({ color: new THREE.Color('#EEF3F4'), toneMapped: false }));
+portal.position.z = -.05;
+const doorway = new THREE.Group(); doorway.add(cross, portal);
+
+const blue = new THREE.MeshStandardMaterial({ color: 0x2A52B8, metalness: 0, roughness: .58, envMapIntensity: .5 });
+const arcLen = Math.PI * 2 * .77;
+const cRing = new THREE.Mesh(new THREE.TorusGeometry(1.25, .29, 40, 160, arcLen), blue);
+cRing.rotation.z = (Math.PI * 2 - arcLen) / 2;
+const tail = new THREE.Mesh(new THREE.ConeGeometry(.3, .7, 32), blue);
+tail.position.set(-.82, -1.18, 0); tail.rotation.z = Math.PI * .78;
+const dotMat = new THREE.MeshStandardMaterial({ color: 0x1FB5C4, roughness: .55, envMapIntensity: .5 });
+const dots = new THREE.Group();
+[-.42, 0, .42].forEach((x, i) => { const d = new THREE.Mesh(new THREE.SphereGeometry(.15, 32, 16), dotMat); d.position.set(x + .18, 0, .1); d.userData.i = i; dots.add(d); });
+const bubble = new THREE.Group(); bubble.add(cRing, tail, dots);
+const BX = 1.05, BY = -.85, BZ = .85;
+bubble.position.set(BX, BY, BZ);
+
+const mark = new THREE.Group(); mark.add(doorway, bubble); scene.add(mark);
+
+const PN = 80, pos = new Float32Array(PN * 3);
+for (let i = 0; i < PN; i++) { pos[i * 3] = (Math.random() - .5) * 26; pos[i * 3 + 1] = (Math.random() - .5) * 16; pos[i * 3 + 2] = -Math.random() * 30 + 4; }
+const pGeo = new THREE.BufferGeometry(); pGeo.setAttribute('position', new THREE.BufferAttribute(pos, 3));
+const pc = document.createElement('canvas'); pc.width = pc.height = 32; const pctx = pc.getContext('2d'); pctx.fillStyle = '#fff'; pctx.fillRect(13, 6, 6, 20); pctx.fillRect(6, 13, 20, 6);
+const pts = new THREE.Points(pGeo, new THREE.PointsMaterial({ size: .09, map: new THREE.CanvasTexture(pc), transparent: true, opacity: .28, color: 0x4CCBD8, depthWrite: false }));
+scene.add(pts);
+
+const key = new THREE.DirectionalLight(0xffffff, 1.1); key.position.set(4, 6, 8); scene.add(key);
+const rim = new THREE.DirectionalLight(0x4CCBD8, .9); rim.position.set(-6, 2, -4); scene.add(rim);
+scene.add(new THREE.HemisphereLight(0xDDEBFF, 0x081638, .35));
+
+let mobile = false;
+function resize() { const W = hero.clientWidth, H = hero.clientHeight; mobile = W < 760; renderer.setSize(W, H, false); camera.aspect = W / H; camera.updateProjectionMatrix(); mark.scale.setScalar(mobile ? .9 : .78); }
+resize(); addEventListener('resize', resize);
+
+const smooth = t => t * t * (3 - 2 * t), cube = t => t * t * t;
+const onScreen = () => { const r = hero.getBoundingClientRect(); return r.bottom > 0 && r.top < innerHeight && !document.hidden; };
+const clock = new THREE.Clock(); let sx = 0, sy = 0;
+function frame() {
+  const t = reduce ? 0 : clock.getElapsedTime(), p = window.CLV.heroP || 0;
+  sx += ((window.CLV.px || 0) - sx) * .05; sy += ((window.CLV.py || 0) - sy) * .05;
+  const homeX = mobile ? 0 : 3.0, homeY = mobile ? 5.6 : .2, z0 = mobile ? 31 : 11.5;
+  const k = smooth(Math.min(1, p / .55)), idle = 1 - k;
+  mark.position.set(homeX * (1 - k), homeY * (1 - k) + Math.sin(t * .7) * .04 * idle, 0);
+  mark.rotation.y = (-.32 + sx * .22) * idle + Math.sin(t * .45) * .035 * idle;
+  mark.rotation.x = (.08 + sy * .12) * idle + Math.cos(t * .4) * .02 * idle;
+  const out = cube(Math.min(1, p / .7));
+  bubble.position.set(BX + out * 6, BY - out * 1.5, BZ + p * 3); bubble.rotation.y = -p * 1.2;
+  dots.children.forEach(d => { d.position.y = Math.max(0, Math.sin(t * 2.6 - d.userData.i * .7)) * .06; });
+  camera.position.set(0, 0, z0 - cube(Math.min(1, p / .96)) * (z0 - .12));
+  camera.lookAt(mark.position.x * .25, mark.position.y * .25, 0);
+  pts.rotation.y = t * .01; pts.position.z = p * 10;
+  renderer.render(scene, camera);
+}
+function loop() { requestAnimationFrame(loop); if (onScreen()) frame(); }
+frame();
+requestAnimationFrame(() => document.documentElement.classList.add('gl-ready'));
+if (reduce) addEventListener('scroll', () => requestAnimationFrame(frame), { passive: true }); else loop();
+</script>
